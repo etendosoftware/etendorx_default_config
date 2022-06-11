@@ -1,0 +1,7 @@
+my:
+	greeting: Hello World
+	list:
+		values:
+			- One
+			- Two
+			- Tree
