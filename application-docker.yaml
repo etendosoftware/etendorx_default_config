@@ -1,0 +1,5 @@
+das:
+  url: http://das:8092
+  grpc:
+    ip: das
+

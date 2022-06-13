@@ -1,0 +1,22 @@
+server:
+  port: 8096
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+      hibernate: ERROR
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        # Login path
+        - id: login_auth_route
+          uri: http://localhost:8094
+          predicates:
+            - Method=GET,POST
+            - Path=/login
+          filters:
+            - RewritePath=/login, /api/authenticate
