@@ -1,0 +1,5 @@
+etendorx:
+  auth:
+    url: http://auth:8094
+  zapier:
+    url: http://zapier:8091

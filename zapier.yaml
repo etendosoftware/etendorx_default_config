@@ -1,0 +1,21 @@
+logging:
+  level: web:DEBUG
+server:
+  port: 8091
+
+# If we need to add a new topic to listen, add a list of name of topics separated by coma.
+spring:
+  cloud:
+    stream:
+      bindings:
+        process-in-0:
+          destination: default.public.c_bpartner_location
+        process-out-0:
+          destination: sinkdest
+        sendZapierData-in-0:
+          destination: sinkdest
+      kafka:
+        binder:
+          brokers: kafka
+    function:
+      definition: process;sendZapierData

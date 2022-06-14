@@ -1,0 +1,28 @@
+server:
+  port: 8093
+
+spring:
+  codec:
+    max-in-memory-size: # Give more capacity to handle big sync requests
+      20MB
+
+timezone-difference: 2
+
+logging:
+  level:
+    web: DEBUG
+    org:
+      springframework:
+        ws:
+          server:
+            MessageTracing:
+              sent: TRACE
+        web:
+          filter:
+            CommonsRequestLoggingFilter: TRACE
+          servlet:
+            mvc:
+              method:
+                annotation:
+                  RequestResponseBodyMethodProcessor: # This configuration adds full payload from POST request to logging output
+                    TRACE
