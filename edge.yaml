@@ -28,7 +28,7 @@ spring:
 
         # Zapier secure paths
         - id: zapier_secure_path_route
-          uri: http://localhost:8091
+          uri: ${etendorx.zapier.url}
           predicates:
             - Method=GET, POST, DELETE
             - Path=/secure/zapier/**
