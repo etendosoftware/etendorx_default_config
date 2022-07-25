@@ -18,9 +18,9 @@ spring:
 logging:
   level:
     web: # Shows each request on output
-      DEBUG
+      INFO
     org:
       hibernate:
         type:
           descriptor: # Shows each hibernate SQL query
-            sql: trace
+            sql: WARN
