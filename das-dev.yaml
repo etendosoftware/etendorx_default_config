@@ -1,3 +1,3 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5470/etendo
+    url: jdbc:postgresql://localhost:5470/etendo_epl_337_qa
